@@ -1,0 +1,9 @@
+set key autotitle columnhead
+set title "Memory bandwidth"
+set xlabel "Cores"
+set ylabel "MB/s (Higher is better)
+
+set terminal pngcairo size 800,600 enhanced font 'Verdana,10'
+set output 'MEM.png'
+
+plot [1:8] 'MEM_P8.txt' with lines title "POWER8", "MEM_P9.txt" with lines title "POWER9"
